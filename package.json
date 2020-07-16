@@ -1,0 +1,61 @@
+{
+  "name": "@soufantech/hie",
+  "version": "1.0.0.beta.1",
+  "description": "hie allows you to build role hierarchies of any complexity and easily check user permissions across them",
+  "keywords": [
+    "RBAC",
+    "role",
+    "permission",
+    "authorization",
+    "access"
+  ],
+  "author": {
+    "name": "Fábio Priamo",
+    "email": "fabio@soufan.com.br",
+    "url": "https://github.com/fhpriamo"
+  },
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access:": "restricted"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "lint": "tsc --noEmit && eslint ./src/**/*.{ts,tsx}",
+    "clear": "rm -rf dist",
+    "build": "tsc",
+    "rebuild": "npm run clear && npm run build",
+    "prepublishOnly": "npm run rebuild && npm run test --silent"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.23",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.2",
+    "typescript": "^3.9.6",
+    "typescript-eslint": "^0.0.1-alpha.0"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
