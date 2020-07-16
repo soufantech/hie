@@ -6,7 +6,7 @@
 
 <div align="center">
   <h1>@soufantech/hie</h1>
-  <p>"hie allows you to build role hierarchies of any complexity and easily check user permissions across them"</p>
+  <p>hie allows you to build role hierarchies of any complexity and easily check user permissions across them.</p>
 </div>
 
 <br />
@@ -19,11 +19,23 @@
 
 ## Installing
 
-`yarn add @soufantech/hie` or `npm install @soufantech/hie`
+with yarn
+
+`yarn add @soufantech/hie`
+
+or npm
+
+`npm install @soufantech/hie`
 
 ## Todo:
 
-- [ ] Add and configure semantic-release.
+- docs: add usage examples;
+- chore: add and configure semantic-release;
+- refactor: refactor authorities to their own folder;
+  - move `RoleAuthority` interface from role-matcher.ts;
+- test: remove use of `getMapping` function in `HierarchicalRoleAuthority` tests;
+- refactor: remove `getMapping` function;
+- feat: define role hierarchy as string (more or less like Spring Boot does);
 
 ---
 
