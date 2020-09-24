@@ -36,10 +36,13 @@ export class RoleMatcher {
   }
 
   public match(requiredRoles: RoleArg, grantedRoles: RoleArg): RoleMatch {
-    const required = ([] as string[])
-      .concat(requiredRoles)
-      .filter(roleArgFilter);
-    const granted = ([] as string[]).concat(grantedRoles).filter(roleArgFilter);
+    const required = Array.from(
+      new Set(([] as string[]).concat(requiredRoles).filter(roleArgFilter)),
+    );
+
+    const granted = Array.from(
+      new Set(([] as string[]).concat(grantedRoles).filter(roleArgFilter)),
+    );
 
     const reachable = Array.from(
       new Set(this.roleAuthority.getReachableRoles(granted).concat(granted)),

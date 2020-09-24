@@ -275,6 +275,34 @@ describe('RoleMatcher', () => {
       `);
     });
 
+    it('remove duplicates from granted and required arrays in the report.', () => {
+      expect(matcher.match(['e', 'z', 'e', 'e'], ['c', 'c', 'b', 'b', 'c']))
+        .toMatchInlineSnapshot(`
+        Object {
+          "all": false,
+          "any": true,
+          "granted": Array [
+            "c",
+            "b",
+          ],
+          "matches": Array [
+            "e",
+          ],
+          "none": false,
+          "reachable": Array [
+            "c",
+            "d",
+            "e",
+            "b",
+          ],
+          "required": Array [
+            "e",
+            "z",
+          ],
+        }
+      `);
+    });
+
     it('matches none with multiple required role and multiple granted roles.', () => {
       expect(matcher.match(['k', 'z'], ['c', 'b'])).toMatchInlineSnapshot(`
         Object {
