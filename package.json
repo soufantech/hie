@@ -1,6 +1,6 @@
 {
   "name": "@soufantech/hie",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "description": "hie allows you to effortlessly check for user permissions across a graph of roles/permissions of arbitrary complexity",
   "keywords": [
     "RBAC",
