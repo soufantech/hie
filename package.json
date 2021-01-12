@@ -14,9 +14,9 @@
     "email": "fabio@soufan.com.br",
     "url": "https://github.com/fhpriamo"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "publishConfig": {
-    "access:": "restricted"
+    "access:": "public"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
