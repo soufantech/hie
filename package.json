@@ -1,7 +1,7 @@
 {
   "name": "@soufantech/hie",
-  "version": "1.0.0-beta.2",
-  "description": "hie allows you to build role hierarchies of any complexity and easily check user permissions across them",
+  "version": "1.0.0",
+  "description": "hie allows you to effortlessly check for user permissions across a graph of roles/permissions of arbitrary complexity",
   "keywords": [
     "RBAC",
     "role",
@@ -14,9 +14,17 @@
     "email": "fabio@soufan.com.br",
     "url": "https://github.com/fhpriamo"
   },
-  "license": "UNLICENSED",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/soufantech/hie.git"
+  },
+  "homepage": "https://github.com/soufantech/hie#readme",
+  "bugs": {
+    "url" : "https://github.com/soufantech/hie/issues"
+  },
+  "license": "MIT",
   "publishConfig": {
-    "access:": "restricted"
+    "access:": "public"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
